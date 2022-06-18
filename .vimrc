@@ -14,7 +14,7 @@ set nowrap
 set undodir=~/.vim/undodir
 set undofile
 set incsearch
-set guifont=Consolas:h11
+set guifont=Hack:h11
 set guioptions-=m
 set guioptions-=T
 set guioptions=r
@@ -34,3 +34,4 @@ nnoremap <C-t> :NERDTreeToggle<CR>
 au GUIEnter * simalt ~x
 colorscheme codedark
 set background=dark
+autocmd filetype cpp nnoremap <C-x> :w <bar> !g++ -std=c++14 % -o %:r -Wl,--stack,268435456 && main<CR>
